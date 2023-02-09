@@ -9,32 +9,27 @@
 
 int main(void)
 {
-	int num1 = 48;
-	int num2 = 49;
-	int num3 = 50;
-	int com = 44;
+	int x, y, z;
 
-	while (num1 <= 55)
+	for (x = 48; x < 58; x++)
 	{
-		num2 = 49;
-		while (num2 <= 56)
+		for (y = 49; y < 58; y++)
 		{
-			num3 = 50;
-			while (num3 <= 57)
+			for (z = 50; z < 58; z++)
 			{
-				putchar(num1);
-				putchar(num2);
-				putchar(num3);
-				if (num1 != 55 || num2 != 56 || num3 != 57)
+				if (y > x && z > y)
 				{
-					putchar(com);
+					putchar(x);
+					putchar(y);
+					putchar(z);
+				}
+				if (x != 55 || y != 56 || z != 57)
+				{
+					putchar(44);
 					putchar(32);
 				}
-				num3 += 1;
 			}
-			num2 += 1;
 		}
-		num1 += 1;
 	}
 	putchar('\n');
 	return (0);

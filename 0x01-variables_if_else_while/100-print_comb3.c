@@ -9,26 +9,22 @@
 
 int main(void)
 {
-	int num1 = 48;
-	int num2 = 49;
-	int com = 44;
+	int x, y;
 
-	while (num1 <= 56)
+	for (x = 48; x < 58; x++)
 	{
-		num2 = 49;
-		while (num2 <= 57)
+		for (y = 49; y < 58; y++)
 		{
-			putchar(num1);
-			putchar(num2);
-			if (num1 != 56 || num2 != 57)
+			if (y > x)
 			{
-				putchar(com);
-				putchar(32);
-			}
-			num2 += 1;
-		}
-		num1 += 1;
-	}
+				putchar(x);
+				putchar(y);
+
+				if (x < 56 || y < 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
 	putchar('\n');
 	return (0);
 }
